@@ -1600,7 +1600,10 @@
   --type-hero: 3rem;
 }
 
-.site-header a,
+.site-header a {
+  font-size: var(--type-label);
+}
+
 .tagline,
 .quick-points,
 .trusted-block p,
@@ -1784,7 +1787,7 @@
   }
 
   .site-header a {
-    font-size: var(--type-caption);
+    font-size: var(--type-label);
   }
 
   .hero-grid,
@@ -1823,7 +1826,7 @@
 
 @media (min-width: 900px) {
   .site-header a {
-    font-size: var(--type-caption);
+    font-size: var(--type-label);
   }
 
   .hero-copy h1 {
