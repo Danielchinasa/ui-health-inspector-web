@@ -126,12 +126,12 @@ function App() {
       <section className="trusted-block" aria-label="Trusted by developers">
         <p>TRUSTED BY DEVELOPERS</p>
         <div className="trusted-row">
-          <span>Google</span>
-          <span>Microsoft</span>
+          <span>Chromatic</span>
+          <span>Linear</span>
           <span>GitHub</span>
           <span>Vercel</span>
           <span>Notion</span>
-          <span>Adobe</span>
+          <span>Railway</span>
         </div>
       </section>
 
