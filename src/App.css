@@ -1606,12 +1606,18 @@
 
 .tagline,
 .quick-points,
-.trusted-block p,
 .overview-label,
 .dashboard-metrics span,
 .dashboard-metrics em,
 .cta-panel small {
   font-size: var(--type-caption);
+}
+
+.trusted-block p {
+  font-size: var(--type-label);
+  color: #dbe5f0;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
 }
 
 .lead,
