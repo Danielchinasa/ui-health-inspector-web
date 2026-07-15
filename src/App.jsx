@@ -227,7 +227,6 @@ function App() {
           <div className="footer-col">
             <h4>Product</h4>
             <a href="#">Features</a>
-            <a href="#">Pricing</a>
             <a href="#">How It Works</a>
             <a href="#">Chrome Extension</a>
             <a href="#">Changelog</a>
