@@ -75,8 +75,6 @@ function App() {
         <nav>
           <a href="#">Features</a>
           <a href="#">How It Works</a>
-          <a href="#">Checks</a>
-          <a href="#">Pricing</a>
           <a href="#">FAQ</a>
         </nav>
         <button className="button-chrome" type="button">
