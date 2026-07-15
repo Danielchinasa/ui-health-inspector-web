@@ -53,7 +53,7 @@ function App() {
       quote:
         "A must-have extension for any developer who cares about building accessible and high-quality interfaces.",
       author: "Sarah Drasner",
-      role: "Google Developer Expert",
+      role: "Frontend Developer",
       initials: "SD",
     },
     {
@@ -223,7 +223,48 @@ function App() {
       </section>
 
       <footer className="site-footer">
-        Built with <span>♥</span> for developers
+        <div className="footer-grid">
+          <div className="footer-col">
+            <h4>Product</h4>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+            <a href="#">How It Works</a>
+            <a href="#">Chrome Extension</a>
+            <a href="#">Changelog</a>
+          </div>
+          <div className="footer-col">
+            <h4>Resource</h4>
+            <a href="#">Documentation</a>
+            <a href="#">API Reference</a>
+            <a href="#">Blog</a>
+            <a href="#">Community</a>
+            <a href="#">Support</a>
+          </div>
+          <div className="footer-col">
+            <h4>Legal</h4>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">GDPR</a>
+            <a href="#">License</a>
+          </div>
+          <div className="footer-col">
+            <h4>Stay in the Loop</h4>
+            <p>Get product updates and UI tips delivered to your inbox.</p>
+            <div className="footer-subscribe">
+              <input type="email" placeholder="your@email.com" />
+              <button type="button">Subscribe</button>
+            </div>
+            <div className="footer-social">
+              <a href="#" aria-label="Twitter/X">𝗏</a>
+              <a href="#" aria-label="GitHub">⌂</a>
+              <a href="#" aria-label="Discord">◈</a>
+            </div>
+          </div>
+        </div>
+        <div className="footer-bottom">
+          Built with <span>♥</span> for developers
+        </div>
       </footer>
     </main>
   );
