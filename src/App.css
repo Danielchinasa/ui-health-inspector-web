@@ -1628,6 +1628,27 @@
   font-size: var(--type-body);
 }
 
+.testimonial-card strong {
+  font-size: var(--type-label);
+  color: #eef5ff;
+  font-weight: 600;
+}
+
+.testimonial-card .person span:not(.avatar) {
+  font-size: var(--type-caption);
+  color: #c4d0e5;
+}
+
+.person {
+  gap: 10px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  font-size: 11px;
+}
+
 .button-chrome,
 .button-primary,
 .button-ghost,
