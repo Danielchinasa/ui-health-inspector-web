@@ -1601,7 +1601,7 @@
 }
 
 .site-header a {
-  font-size: var(--type-label);
+  font-size: 1.125rem;
 }
 
 .tagline,
@@ -1787,7 +1787,7 @@
   }
 
   .site-header a {
-    font-size: var(--type-label);
+    font-size: 1.125rem;
   }
 
   .hero-grid,
@@ -1826,7 +1826,7 @@
 
 @media (min-width: 900px) {
   .site-header a {
-    font-size: var(--type-label);
+    font-size: 1.125rem;
   }
 
   .hero-copy h1 {
