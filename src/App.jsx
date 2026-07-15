@@ -234,9 +234,6 @@ function App() {
           </div>
           <div className="footer-col">
             <h4>Resource</h4>
-            <a href="#">Documentation</a>
-            <a href="#">API Reference</a>
-            <a href="#">Blog</a>
             <a href="#">Community</a>
             <a href="#">Support</a>
           </div>
@@ -244,9 +241,6 @@ function App() {
             <h4>Legal</h4>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <a href="#">Cookie Policy</a>
-            <a href="#">GDPR</a>
-            <a href="#">License</a>
           </div>
           <div className="footer-col">
             <h4>Stay in the Loop</h4>
@@ -254,11 +248,6 @@ function App() {
             <div className="footer-subscribe">
               <input type="email" placeholder="your@email.com" />
               <button type="button">Subscribe</button>
-            </div>
-            <div className="footer-social">
-              <a href="#" aria-label="Twitter/X">𝗏</a>
-              <a href="#" aria-label="GitHub">⌂</a>
-              <a href="#" aria-label="Discord">◈</a>
             </div>
           </div>
         </div>
