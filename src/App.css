@@ -523,6 +523,12 @@
 }
 
 .cta-panel small {
+  color: #a0bcdb;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.cta-panel small {
   display: block;
   margin-top: 13px;
   color: #7f9dc6;
@@ -1617,6 +1623,22 @@
   font-size: var(--type-label);
   color: #dbe5f0;
   letter-spacing: 0.08em;
+}
+
+.cta-panel .button-primary {
+  font-size: 1.125rem;
+  padding: 15px 28px;
+}
+
+.cta-panel p {
+  font-size: 1rem;
+  color: #d4e2f7;
+  font-weight: 500;
+}
+
+.cta-panel small {
+  font-size: var(--type-label);
+  color: #aac4eb;
 }
 
 .lead,
