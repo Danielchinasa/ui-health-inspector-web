@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 .page-shell {
   width: min(1200px, calc(100% - 32px));
@@ -75,7 +75,7 @@
 }
 
 .brand-name {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 31px;
   font-weight: 600;
   color: #e7efff;
@@ -141,7 +141,7 @@
 
 .hero-copy h1 {
   margin: 20px 0 12px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: clamp(42px, 4.8vw, 78px);
   line-height: 1.03;
   letter-spacing: -0.03em;
@@ -257,7 +257,7 @@
 }
 
 .score-ring strong {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 44px;
   color: #f4f8ff;
   line-height: 1;
@@ -274,7 +274,7 @@
   font-size: 34px;
   line-height: 1;
   color: #ff5a4f;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .status p {
@@ -333,7 +333,7 @@
 
 .trusted-row span {
   color: rgba(194, 211, 238, 0.58);
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -356,7 +356,7 @@
 .cta-panel h2 {
   margin: 0;
   color: #ecf4ff;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: clamp(32px, 3.4vw, 56px);
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -401,7 +401,7 @@
 .feature-card h3 {
   margin: 16px 0 10px;
   color: #eff4ff;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 28px;
   line-height: 1.15;
 }
@@ -440,7 +440,7 @@
   font-size: 46px;
   display: block;
   line-height: 1;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .stats-bar span {
@@ -828,7 +828,7 @@
 }
 .dashboard-titlebar strong {
   font:
-    700 14px "Space Grotesk",
+    700 14px "Poppins",
     sans-serif;
 }
 .dashboard-titlebar span {

@@ -86,9 +86,6 @@ function App() {
 
       <section className="hero-grid">
         <div className="hero-copy">
-          <p className="tagline">
-            Design Quality Inspector <b>v1.0.0</b>
-          </p>
           <h1>
             Find UI issues.
             <br />
