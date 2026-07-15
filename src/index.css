@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background:
+    radial-gradient(
+      circle at 18% 15%,
+      rgba(0, 255, 133, 0.14),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 79% 11%,
+      rgba(0, 140, 255, 0.15),
+      transparent 24%
+    ),
+    #05090b;
+  color: #e7f0ef;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
