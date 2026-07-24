@@ -217,11 +217,13 @@ function TermsOfUse() {
 }
 
 function App() {
-  if (window.location.pathname === "/privacy-policy") {
+  const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
+
+  if (pathname === "/privacy-policy") {
     return <LegalPage type="privacy" />;
   }
 
-  if (window.location.pathname === "/terms-of-use") {
+  if (pathname === "/terms-of-use") {
     return <LegalPage type="terms" />;
   }
 
@@ -289,20 +291,23 @@ function App() {
   ];
 
   return (
-    <main className="page-shell">
+    <main className="page-shell" id="main-content" tabIndex="-1">
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
       <header className="site-header">
-        <div className="brand">
+        <a className="brand" href="/" aria-label="UI Health home">
           <img className="brand-mark" src={uiHealthLogo} alt="" />
           <span className="brand-name">UI Health</span>
-        </div>
-        <nav>
-          <a href="#">Features</a>
-          <a href="#">How It Works</a>
-          <a href="#">FAQ</a>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
         </nav>
-        <button className="button-chrome" type="button">
-          <span className="chrome-dot" aria-hidden="true" /> Add to Chrome
-        </button>
+        <a className="button-chrome" href="#install">
+          <span className="chrome-dot" aria-hidden="true" /> Get the extension
+        </a>
       </header>
 
       <section className="hero-grid">
@@ -320,13 +325,11 @@ function App() {
             them.
           </p>
           <div className="hero-actions">
-            <button className="button-primary" type="button">
+            <a className="button-primary" href="#install">
               <span className="chrome-dot" aria-hidden="true" /> Add to Chrome -
               It&apos;s Free
-            </button>
-            <button className="button-ghost" type="button">
-              View Demo
-            </button>
+            </a>
+            <a className="button-ghost" href="#how-it-works">View how it works</a>
           </div>
           <ul className="quick-points">
             <li>No sign up</li>
@@ -344,6 +347,30 @@ function App() {
         </div>
       </section>
 
+      <section className="how-it-works" id="how-it-works" aria-labelledby="how-it-works-title">
+        <div className="section-heading">
+          <p className="section-kicker">HOW IT WORKS</p>
+          <h2 id="how-it-works-title">A clear checkup, right where you work.</h2>
+        </div>
+        <ol className="steps-grid">
+          <li>
+            <span>01</span>
+            <h3>Open the page</h3>
+            <p>Navigate to the live, staging, or local page you want to review.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>Run a scan</h3>
+            <p>Start UI Health Inspector from Chrome to inspect the current page.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>Prioritize fixes</h3>
+            <p>Use the report to understand issues and make improvements with confidence.</p>
+          </li>
+        </ol>
+      </section>
+
       <section className="trusted-block" aria-label="Trusted by developers">
         <p>TRUSTED BY DEVELOPERS</p>
         <div className="trusted-row">
@@ -356,9 +383,9 @@ function App() {
         </div>
       </section>
 
-      <section className="features-section">
+      <section className="features-section" id="features" aria-labelledby="features-title">
         <div className="section-intro">
-          <h2>
+          <h2 id="features-title">
             Everything you need for
             <br />
             <span>healthier user interfaces</span>
@@ -371,7 +398,7 @@ function App() {
         <div className="features-grid">
           {featureCards.map((card) => (
             <article className="feature-card" key={card.title}>
-              <span className={`feature-icon ${card.tone}`}>{card.icon}</span>
+              <span className={`feature-icon ${card.tone}`} aria-hidden="true">{card.icon}</span>
               <h3>{card.title}</h3>
               <p>{card.text}</p>
             </article>
@@ -381,33 +408,33 @@ function App() {
 
       <section className="stats-bar" aria-label="Key metrics">
         <article>
-          <i>⌕</i>
+          <i aria-hidden="true">⌕</i>
           <strong>50,000+</strong>
           <span>Pages Scanned</span>
         </article>
         <article>
-          <i>✓</i>
+          <i aria-hidden="true">✓</i>
           <strong>120,000+</strong>
           <span>Issues Detected</span>
         </article>
         <article>
-          <i>♧</i>
+          <i aria-hidden="true">♧</i>
           <strong>8,000+</strong>
           <span>Developers</span>
         </article>
         <article>
-          <i>☆</i>
+          <i aria-hidden="true">☆</i>
           <strong>4.9/5</strong>
           <span>Chrome Web Store</span>
         </article>
       </section>
 
-      <section className="testimonials-section">
+      <section className="testimonials-section" aria-labelledby="testimonials-title">
         <div className="section-topline">
-          <h2>
+          <h2 id="testimonials-title">
             Loved by <span>developers</span>
           </h2>
-          <a href="#">More on Chrome Web Store</a>
+          <a href="#install">Find us on Chrome Web Store</a>
         </div>
         <div className="testimonials-grid">
           {testimonials.map((item) => (
@@ -425,37 +452,56 @@ function App() {
         </div>
       </section>
 
-      <section className="cta-panel">
+      <section className="cta-panel" id="install" aria-labelledby="install-title">
         <div className="shield">⌁</div>
         <div className="cta-copy">
-          <h2>
+          <h2 id="install-title">
             Ready to build
             <br />
             <span>better UI?</span>
           </h2>
-          <p>Install UI Health Inspector and start scanning today.</p>
-          <button className="button-primary" type="button">
-            <span className="chrome-dot" aria-hidden="true" /> Add to Chrome -
-            It&apos;s Free
-          </button>
+          <p>
+            UI Health Inspector is preparing for its Chrome Web Store launch.
+            This page will link directly to the listing when it is published.
+          </p>
           <small>No sign up. No credit card. No hassle.</small>
         </div>
         <div className="cta-shield">⌁</div>
+      </section>
+
+      <section className="faq-section" id="faq" aria-labelledby="faq-title">
+        <div className="section-heading">
+          <p className="section-kicker">QUESTIONS</p>
+          <h2 id="faq-title">Frequently asked questions</h2>
+        </div>
+        <div className="faq-list">
+          <details>
+            <summary>Does UI Health Inspector send my page content anywhere?</summary>
+            <p>No. Scans run locally in your browser. See our <a href="/privacy-policy">Privacy Policy</a> for the full explanation.</p>
+          </details>
+          <details>
+            <summary>Can I scan local and staging environments?</summary>
+            <p>Yes. UI Health Inspector is designed to help review pages wherever they are available in your Chrome browser.</p>
+          </details>
+          <details>
+            <summary>Does a scan guarantee my page is compliant or error-free?</summary>
+            <p>No. The extension provides useful automated checks and recommendations; you should review findings and validate changes before release.</p>
+          </details>
+        </div>
       </section>
 
       <footer className="site-footer">
         <div className="footer-grid">
           <div className="footer-col">
             <h4>Product</h4>
-            <a href="#">Features</a>
-            <a href="#">How It Works</a>
-            <a href="#">Chrome Extension</a>
-            <a href="#">Changelog</a>
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#install">Chrome Extension</a>
           </div>
           <div className="footer-col">
             <h4>Resource</h4>
-            <a href="#">Community</a>
-            <a href="#">Support</a>
+            <a href="#faq">FAQ</a>
+            <a href="/privacy-policy">Privacy</a>
           </div>
           <div className="footer-col">
             <h4>Legal</h4>
@@ -463,12 +509,8 @@ function App() {
             <a href="/terms-of-use">Terms of Use</a>
           </div>
           <div className="footer-col">
-            <h4>Stay in the Loop</h4>
-            <p>Get product updates and UI tips delivered to your inbox.</p>
-            <div className="footer-subscribe">
-              <input type="email" placeholder="your@email.com" />
-              <button type="button">Subscribe</button>
-            </div>
+            <h4>Extension availability</h4>
+            <p>The Chrome Web Store listing link will be posted here when the extension launches.</p>
           </div>
         </div>
         <div className="footer-bottom">
