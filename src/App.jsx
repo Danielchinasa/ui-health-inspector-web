@@ -1,6 +1,6 @@
 import "./App.css";
 import heroImage from "./assets/hero_image.png";
-import uiHealthLogo from "./assets/Ui_health_logo.png";
+import uiHealthLogo from "./assets/ui_health_logo.png";
 
 function LegalPage({ type }) {
   const isPrivacy = type === "privacy";
