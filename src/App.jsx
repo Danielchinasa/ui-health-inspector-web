@@ -1,7 +1,230 @@
 import "./App.css";
 import heroImage from "./assets/hero_image.png";
+import uiHealthLogo from "./assets/Ui_health_logo.png";
+
+function LegalPage({ type }) {
+  const isPrivacy = type === "privacy";
+  const title = isPrivacy ? "Privacy Policy" : "Terms of Use";
+
+  return (
+    <main className="page-shell legal-shell">
+      <header className="site-header legal-header">
+        <a className="brand" href="/" aria-label="UI Health home">
+          <img className="brand-mark" src={uiHealthLogo} alt="" />
+          <span className="brand-name">UI Health</span>
+        </a>
+        <a className="legal-home-link" href="/">
+          ← Back to home
+        </a>
+      </header>
+
+      <article className="legal-document">
+        <p className="legal-eyebrow">UI HEALTH INSPECTOR</p>
+        <h1>{title}</h1>
+        <p className="legal-updated">Last updated: July 24, 2026</p>
+
+        {isPrivacy ? <PrivacyPolicy /> : <TermsOfUse />}
+      </article>
+
+      <footer className="legal-footer">
+        <span>© {new Date().getFullYear()} UI Health Inspector</span>
+        <span aria-hidden="true">•</span>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <span aria-hidden="true">•</span>
+        <a href="/terms-of-use">Terms of Use</a>
+      </footer>
+    </main>
+  );
+}
+
+function PrivacyPolicy() {
+  return (
+    <div className="legal-content">
+      <p className="legal-summary">
+        UI Health Inspector is designed to inspect pages in your browser, not to
+        build a profile about you. This policy explains the limited information
+        the extension handles while providing its analysis.
+      </p>
+      <section>
+        <h2>1. What UI Health Inspector does</h2>
+        <p>
+          UI Health Inspector analyzes the page you choose to inspect for UI,
+          usability, accessibility, performance, SEO, and best-practice issues.
+          The analysis is performed locally in your browser. We do not operate a
+          service that receives the pages you scan or the results of those
+          scans.
+        </p>
+      </section>
+      <section>
+        <h2>2. Information the extension can access</h2>
+        <p>
+          When you start a scan, the extension may read the active page&apos;s
+          URL, document structure, visible content, styles, metadata, and
+          technical signals needed to identify issues. A page can contain
+          personal, confidential, or sensitive information. That information is
+          processed only on your device for the duration needed to produce the
+          inspection result.
+        </p>
+      </section>
+      <section>
+        <h2>3. Information we do not collect</h2>
+        <p>
+          We do not collect, transmit, sell, rent, or share your browsing
+          history, scanned page content, scan results, account information,
+          authentication credentials, financial information, or personal data.
+          UI Health Inspector does not use advertising, analytics, tracking
+          pixels, or third-party data brokers.
+        </p>
+      </section>
+      <section>
+        <h2>4. Local storage and permissions</h2>
+        <p>
+          The extension may use browser-local storage for settings that make the
+          product work as expected, such as preferences you choose in the
+          extension. This information stays in your browser and is not sent to
+          us. Any permission requested by the extension is used only to enable
+          the feature described in the extension&apos;s Chrome Web Store
+          listing.
+        </p>
+      </section>
+      <section>
+        <h2>5. Third-party websites</h2>
+        <p>
+          This policy applies to UI Health Inspector. Websites you scan remain
+          governed by their own privacy notices and practices. Using the
+          extension does not change the information those websites collect from
+          you directly.
+        </p>
+      </section>
+      <section>
+        <h2>6. Children&apos;s privacy</h2>
+        <p>
+          UI Health Inspector is not directed to children under 13, and we do
+          not knowingly collect personal information from children.
+        </p>
+      </section>
+      <section>
+        <h2>7. Changes to this policy</h2>
+        <p>
+          If our data practices change, we will update this page before the
+          change takes effect and revise the “Last updated” date above. A change
+          that involves collecting or sharing personal data will be clearly
+          described here.
+        </p>
+      </section>
+      <section>
+        <h2>8. Questions</h2>
+        <p>
+          For privacy questions or requests, contact us through the support
+          contact listed in the UI Health Inspector Chrome Web Store listing.
+        </p>
+      </section>
+    </div>
+  );
+}
+
+function TermsOfUse() {
+  return (
+    <div className="legal-content">
+      <p className="legal-summary">
+        These Terms of Use govern your use of UI Health Inspector, including its
+        Chrome extension and this website.
+      </p>
+      <section>
+        <h2>1. Acceptance of these terms</h2>
+        <p>
+          By installing, accessing, or using UI Health Inspector, you agree to
+          these Terms of Use. If you do not agree, do not use the extension or
+          website.
+        </p>
+      </section>
+      <section>
+        <h2>2. The service</h2>
+        <p>
+          UI Health Inspector provides automated observations and suggestions
+          about web pages. Its findings are informational only. They are not a
+          substitute for professional accessibility, security, legal, or
+          performance review, and they do not guarantee that a page is free of
+          defects or compliant with any law, standard, or policy.
+        </p>
+      </section>
+      <section>
+        <h2>3. Your responsibilities</h2>
+        <p>
+          You may use the extension only on pages you are authorized to inspect.
+          You are responsible for reviewing all results, validating changes
+          before deployment, and complying with the terms, policies, and laws
+          that apply to the websites and systems you access.
+        </p>
+      </section>
+      <section>
+        <h2>4. Acceptable use</h2>
+        <p>
+          You must not use UI Health Inspector to interfere with websites or
+          networks, bypass access controls, violate another person&apos;s
+          privacy or intellectual-property rights, reverse engineer the
+          extension except where law permits, or use the service for unlawful
+          activity.
+        </p>
+      </section>
+      <section>
+        <h2>5. Ownership</h2>
+        <p>
+          UI Health Inspector, its software, design, branding, and related
+          materials are owned by their respective rights holders and are
+          protected by applicable intellectual-property laws. We grant you a
+          limited, personal, non-exclusive, non-transferable, revocable license
+          to use the extension in accordance with these terms.
+        </p>
+      </section>
+      <section>
+        <h2>6. Availability and changes</h2>
+        <p>
+          We may update, suspend, or discontinue any part of UI Health Inspector
+          to improve the product, address security concerns, or meet legal
+          requirements. We do not guarantee uninterrupted availability or that
+          every issue will be detected.
+        </p>
+      </section>
+      <section>
+        <h2>7. Disclaimer and limitation of liability</h2>
+        <p>
+          UI Health Inspector is provided “as is” and “as available,” without
+          warranties of any kind, whether express, implied, or statutory. To the
+          maximum extent allowed by law, we are not liable for indirect,
+          incidental, special, consequential, or punitive damages, or for loss
+          of data, profits, goodwill, or business opportunity arising from your
+          use of the extension.
+        </p>
+      </section>
+      <section>
+        <h2>8. Changes to these terms</h2>
+        <p>
+          We may revise these terms from time to time. The updated version will
+          be posted on this page with a new “Last updated” date. Continued use
+          after an update means you accept the revised terms.
+        </p>
+      </section>
+      <section>
+        <h2>9. Contact</h2>
+        <p>
+          Questions about these terms can be sent through the support contact in
+          the UI Health Inspector Chrome Web Store listing.
+        </p>
+      </section>
+    </div>
+  );
+}
 
 function App() {
+  if (window.location.pathname === "/privacy-policy") {
+    return <LegalPage type="privacy" />;
+  }
+
+  if (window.location.pathname === "/terms-of-use") {
+    return <LegalPage type="terms" />;
+  }
+
   const featureCards = [
     {
       icon: "⌘",
@@ -69,7 +292,7 @@ function App() {
     <main className="page-shell">
       <header className="site-header">
         <div className="brand">
-          <span className="brand-mark">⌁</span>
+          <img className="brand-mark" src={uiHealthLogo} alt="" />
           <span className="brand-name">UI Health</span>
         </div>
         <nav>
@@ -236,8 +459,8 @@ function App() {
           </div>
           <div className="footer-col">
             <h4>Legal</h4>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-use">Terms of Use</a>
           </div>
           <div className="footer-col">
             <h4>Stay in the Loop</h4>
